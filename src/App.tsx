@@ -46,7 +46,11 @@ function App() {
           <button onClick={handleCalculateButton}>Calcular</button>
         </div>
         <div className={styles.rightSide}>
-          ...
+          <div className={styles.grid}>
+            {levels.map((item, key) => (
+              <div key={key}>{item.title}</div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
