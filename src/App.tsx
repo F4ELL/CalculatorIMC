@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import poweredImage from './assets/powered.png'
+import { GridItem } from './components/GridItem';
 
 import { levels, calculateImc } from './helpers/imc'
 
@@ -48,7 +49,7 @@ function App() {
         <div className={styles.rightSide}>
           <div className={styles.grid}>
             {levels.map((item, key) => (
-              <div key={key}>{item.title}</div>
+              <GridItem key={key} item={item}/>
             ))}
           </div>
         </div>
